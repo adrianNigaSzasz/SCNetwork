@@ -19,7 +19,7 @@ abstract class SourceCodeNetworkAbstract
     {
         $finder = Finder::create()->files()->in($path);
         $extensionsArray = [];
-        /** @var Symfony\Component\Finder\SplFileInfo $files */
+        /** @var \Symfony\Component\Finder\SplFileInfo $files */
         foreach($finder as $files)
         {
             $ext = strtolower($files->getExtension());
@@ -40,7 +40,7 @@ abstract class SourceCodeNetworkAbstract
         $finder = Finder::create()->files()->name('*.php')->in($path)->notPath('vendor')->ignoreVCS(true);
 
         $total = 0;
-        /** @var Symfony\Component\Finder\SplFileInfo $file */
+        /** @var \Symfony\Component\Finder\SplFileInfo $file */
         foreach($finder as $file)
         {
             echo "Processing ".$file->getRealPath();
