@@ -1,0 +1,22 @@
+{
+    "name": "drianNigaSzasz/SCNetwork",
+    "type": "library",
+    "description": "Your package description goes here",
+    "keywords": ["relevant","tags","go","here"],
+    "homepage": "https://yourcompany.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "",
+            "email": "",
+            "homepage": "",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "nikic/php-parser": "^4.2",
+        "graphaware/neo4j-php-client": "^4.8",
+        "symfony/finder": "^4.2"
+    },
+
+}
