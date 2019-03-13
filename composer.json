@@ -7,10 +7,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "",
-            "email": "",
-            "homepage": "",
-            "role": "Developer"
+            "name": "Adrian Niga Szasz",
+            "email": "adi.niga@gmail.com",
+            "homepage": ""
         }
     ],
     "require": {
