@@ -3,10 +3,6 @@
 require_once(__DIR__."/../vendor/autoload.php");
 
 use PhpParser\Error;
-use PhpParser\NodeDumper;
-use PhpParser\ParserFactory;
-
-
 
 use PhpParser\NodeTraverser;
 
@@ -14,11 +10,12 @@ use Symfony\Component\Finder\Finder;
 
 
 
+
 abstract class SourceCodeNetworkAbstract
 {
-    public function getFileTypes() : array
+    public function getFileTypes($path) : array
     {
-        $finder = Finder::create()->files()->in(__DIR__.'/../../dotw/dw/v3/');
+        $finder = Finder::create()->files()->in($path);
         $extensionsArray = [];
         /** @var Symfony\Component\Finder\SplFileInfo $files */
         foreach($finder as $files)
@@ -66,15 +63,4 @@ abstract class SourceCodeNetworkAbstract
 }
 
 
-
-
-$obj = new DotwCodeNetwork();
-$visit = new visitors\ClassAndFunctionVisitor();
-
-$obj->analyze(
-    __DIR__.'/../../dotw/dw/v3/',
-    (new ParserFactory)->create(ParserFactory::PREFER_PHP7),
-    new NodeTraverser(),
-    $visit
-);
 
